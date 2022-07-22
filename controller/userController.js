@@ -8,9 +8,9 @@ const CircularJSON = require('circular-json')
 
 rout.get("/weather", async(req, res) => {
     let data = await user.weather()
-    const str = CircularJSON.stringify(data);
+        // const str = CircularJSON.stringify(data.data);
 
-    return res.status(200).send(JSON.parse(str))
+    return res.status(200).send(data.data)
         // return res.status(200).send(data)
 })
 
